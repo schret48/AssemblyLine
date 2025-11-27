@@ -111,6 +111,7 @@ typedef enum {
   adox,
   and,
   bextr,
+  bt,
   bzhi,
   call,
   clc,

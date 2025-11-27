@@ -62,6 +62,8 @@ const struct instr_table INSTR_TABLE[] = {
     {{'\0'},        and,         {mi, ri},   M,   OPERATION,      1,   4,   3,  {REX, 0x80, REG}},
     {{'\0'},        and,         {NA, NA},   I,   OPERATION,      1,   NA,  2,  {REX, 0x24}},
     {"bextr",       bextr,       {rrr, rmr}, RMV, VECTOR_EXT,     NA,  NA,  3,  {VEX(NDS,LZ,NONE,X0F38,W0_W1), 0xf7, REG}},
+    {"bt",          bt,          {rr,  rm},  MR,  OPERATION,      NA,  NA,  4,  {REX, 0x0f, 0xa3, REG}},
+    {{'\0'},        bt,          {mi,  ri},  M,   OPERATION,      NA,  NA,  4,  {REX, 0x0f, 0xa3, REG}},
     {"bzhi",        bzhi,        {rrr, rmr}, RMV, VECTOR_EXT,     NA,  NA,  3,  {VEX(NDS,LZ,NONE,X0F38,W0_W1), 0xf5, REG}},
     {"call",        call,        {n,  n},    D,   CONTROL_FLOW,   NA,  NA,  1,  {0xe8}},
     {{'\0'},        call,        {r,  m},    O,   CONTROL_FLOW,   NA,  2,   3,  {REX, 0xff, REG}},
